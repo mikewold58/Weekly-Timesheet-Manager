@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Weekly Timesheet Manager</title>
+</head>
+<body>
+    <div class="container">
+        <h1>AP Weekly Timesheet Manager</h1>
+        <div class="input-container" id="week-selector">
+            <label class="label" for="week-start-input">Select Week Starting Sunday:</label>
+            <input type="date" id="week-start-input">
+        </div>
+        <div class="input-container">
+            <label for="client-name-input">Enter Client Name:</label>
+            <input type="text" id="client-name-input">
+        </div>
+        <div class="input-container">
+            <label for="task-select">Select Task:</label>
+            <select id="task-select">
+                <option value="Payables">Payables</option>
+                <option value="Payments">Payments</option>
+                <option value="Credit Cards">Credit Cards</option>
+                <option value="Issue Resolution">Issue Resolution</option>
+                <option value="Meeting">Meeting</option>
+                <option value="Expense Reports">Expense Reports</option>
+                <option value="1099 Work">1099 Work</option>
+            </select>
+            <button id="add-task-button">Add Task</button>
+        </div>
+        <div class="input-container">
+            <button id="download-csv-button">Download CSV</button>
+        </div>
+        <div class="table-wrapper">
+            <table id="days-table">
+                <thead>
+                    <tr id="days-header">
+                        <th>Task Name</th>
+                        <!-- Days of the week will be populated here -->
+                    </tr>
+                </thead>
+                <tbody id="week-tasks-body">
+                    <!-- Task rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
